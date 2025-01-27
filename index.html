@@ -3,9 +3,8 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Visualization of university programs</title>
+    <title>Accompaniment in America</title>
     <link rel="stylesheet" href="styles.css" />
-    <script src="script.js" defer></script>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -14,130 +13,58 @@
     />
   </head>
   <body>
-    <div class="popup-positioning">
-      <div class="pop-up-layout">
-        <h1>Visualization of University Programs</h1>
-        <p>
-          This data visualization, published in connection with the hybrid
-          monograph & digital publication Accompaniment in America:
-          Contextualizing Collaborative Piano (2025, Routledge) traces the
-          history and evolution of collaborative piano programs across North
-          America, contextualizing the development of this discipline in
-          academic settings. With a timeline from the 1930s to 2025, it offers
-          users a dynamic, interactive map where degree-giving programs are
-          marked according to founding date, current status, and notable
-          affiliations. Dots appear as the user scrolls along the timeline,
-          indicating each program’s location, status, and legacy as they emerge.
-          Programs that have or have had a strong connection to the Gwendolyn
-          Koldofsky legacy are colored blue/purple, all other existing programs
-          are orange. Now defunct programs are pink, while programs for which
-          little to no information about their origins is known are turquoise.
-          <br /><br />
-          Designed by Chanda VanderHart and programmed by David Wögerbauer, this
-          visualization offers a layered, narrative-driven exploration of
-          collaborative piano education. Users can delve deeper into each
-          program’s history by selecting individual points on the map, which
-          reveal details about the program’s founder, year of establishment, and
-          current leadership. Programs that have lost funding or ceased
-          operation appear in pink, underscoring changes in the field over time.
-          <br />
-          <br />
-          The data, gathered by Lauren Koszyk and Chanda VanderHart with help
-          from Elvia Puccinelli, Jean Barr, and Kathleen Kelly, reflects
-          contributions from faculty members, administrators, and archivists. As
-          knowledge of the field continues to evolve, users are encouraged to
-          contribute updates or corrections to ensure ongoing accuracy. This
-          project is designed to reflect the collaborative spirit of the
-          discipline and to offer a rich resource for understanding its
-          historical and pedagogical landscape.
-        </p>
-        <div class="dot-explanations">
-          <div class="dot-explanation">
-            <div class="map-pointer"></div>
-            Standard Programs
-          </div>
-          <div class="dot-explanation">
-            <div class="map-pointer purple"></div>
-            Koldofsky Legacy
-          </div>
-          <div class="dot-explanation">
-            <div class="map-pointer turquoise"></div>
-            Origins Unknown
-          </div>
-          <div class="dot-explanation">
-            <div class="map-pointer pink"></div>
-            Discontinued
-          </div>
-          <div class="dot-explanation">
-            <div class="map-pointer active-pointer-fixed"></div>
-            Current Selection
+    <nav>
+      <h1>Accompaniment in America</h1>
+      <div class="nav-links">
+        <a href="index.html">About</a>
+        <a href="koldofsky-collection.html">Koldofsky Collection</a>
+        <div class="dropdown-wrapper">
+          <span>Profiles</a>
+          <div class="dropdown-links">
+            <a href="barr-collection.html">Jean Barr</a>
+            <a href="wustman-collection.html">John Wustman</a>
+            <a href="bossart-collection.html">Eugene Bossart</a>
+            <a href="katz-collection.html">Martin Katz</a>
+            <a href="sanders-collection.html">Samuel Sanders</a>
+            <a href="garrett-collection.html">Margo Garrett</a>
+            <a href="epperson-collection.html">Anne Epperson</a>
           </div>
         </div>
-        <button
-          onclick="document.querySelector('.popup-positioning').style.display='none';"
-        >
-          Show the map
-        </button>
+        <a href="programs.html">Programs</a>
+        <a href="perspectives.html">Perspectives</a>
+        <a href="resources.html">Resources</a>
       </div>
-    </div>
-    <div class="map-slider-layout">
-      <div class="map-info-layout">
-        <div class="usa-map-layout">
-          <img class="usa-map" src="USCanadaMap.svg" alt="US Canada Map" />
-          <div class="map-points"></div>
-          <button
-            class="show-help"
-            onclick="document.querySelector('.popup-positioning').style.display='flex';"
-          >
-            ?
-          </button>
-          <div class="dot-explanation-map-positioning">
-            <div class="dot-explanations">
-              <div class="dot-explanation">
-                <div class="map-pointer"></div>
-                Standard Programs
-              </div>
-              <div class="dot-explanation">
-                <div class="map-pointer purple"></div>
-                Koldofsky Legacy
-              </div>
-              <div class="dot-explanation">
-                <div class="map-pointer turquoise"></div>
-                Origins Unknown
-              </div>
-              <div class="dot-explanation">
-                <div class="map-pointer pink"></div>
-                Discontinued
-              </div>
-              <div class="dot-explanation">
-                <div class="map-pointer active-pointer-fixed"></div>
-                Current Selection
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="info-layout">
-          <button onclick="hideUniversityDetails()">X</button>
-          <h2 class="info-headline">university name</h2>
-          <div class="info-content">university description</div>
-        </div>
-      </div>
-      <p class="timeline-explanation">
-        Scroll along the timeline to see program growth and click on individual
-        dots to access detailed content.
-      </p>
-      <p>Year: <span id="demo"></span></p>
-      <div class="slider-layout">
-        <p>1930</p>
-        <input
-          type="range"
-          min="1930"
-          max="2025"
-          value="1990"
-          class="slider"
-          id="myRange"
-        />
-        <p>2025</p>
+    </nav>
+    <div class="content-layout-wrapper">
+      <div class="content-layout">
+        Welcome to the Accompaniment in America digital collection, created in connection with the book <i>Accompaniment in America: Contextualizing Collaborative Piano</i> (Routledge, 2025).
+        <br><br>
+        <i>Accompaniment in America</i> offers a transformative exploration of collaborative piano as both an essential art form and a multifaceted profession. Authored by Chanda VanderHart, Kathleen Kelly, and Elvia Puccinelli, it aims to deepen understanding of the historical, academic, and sociological dimensions of collaborative piano, with a particular focus on its development in North America.
+        <br><br>
+        This digital platform, architected and designed by Chanda VanderHart and implemented and programmed by David Wögerbauer, expands the book’s reach, enabling readers to delve deeper into its subjects. From interviews with field experts, to source material, to rare archival footage, these resources offer an unparalleled opportunity to explore the field’s rich history and ongoing evolution.
+        <br><br>
+        Through a blend of rigorous scholarship, rich storytelling, and multimedia digital innovation, this hybrid project brings the history of collaborative piano to life. By weaving together archival research, personal interviews, and advanced visualization tools, this project presents a multidimensional view of the field and its history, celebrating its complexity and cultural significance.
+        <br><br>
+        The book and its accompanying digital collection explore:
+        <ul>
+          <li>
+            <b>Historical Foundations</b>: From early degree programs at Curtis Institute of Music and University of Southern California to the trailblazing contributions of figures like Gwendolyn Koldofsky.
+          </li>
+          <li>
+            <b>Pioneering Figures</b>: Profiling selected key individuals who shaped the discipline: Gwendolyn Koldofsky, Jean Barr, Samuel Sanders, Eugene Bossart, John Wustman, Margo Garrett, Anne Epperson.
+          </li>
+          <li>
+            <b>Institutional Development</b>: Analyzing the establishment of over 100 degree-granting programs across North America, supported by interactive visualizations and detailed data.
+          </li>
+          <li>
+            <b>Modern Discourse</b>: Investigating contemporary challenges, innovations, and the evolving academic landscape of collaborative piano, through conversations with field experts and historical documentation.
+          </li>
+          <li>
+            <b>Digital Resources</b>: Offering access to a treasure trove of multimedia materials—photos, videos, interviews, articles, recordings, and more
+          </li>
+        </ul>
+        <br>
+        Please note that while <b>some</b> objects documented in these collections <b>have been</b> published Open Access, that is not automatically the case. Specific permission is required to reuse <b>most</b> images, <b>CITING THIS COLLECTION IS NOT SUFFICIENT</b>. If you are interested in reusing anything and unclear of its status, please contact <a href="https://chandavanderhart.com/" target="_blank">Chanda VanderHart</a> for information about who the copyright holders are and how to best reach them. Feel free to both cite and link to this collection as a whole, or to reuse those objects identified within it as Open Access, citing appropriately.
       </div>
     </div>
   </body>
