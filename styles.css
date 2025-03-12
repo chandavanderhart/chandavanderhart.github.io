@@ -456,3 +456,7 @@ p {
   margin: 0 50px;
   max-width: 1000px;
 }
+
+.perspective.center {
+  grid-column: 1/3;
+}
