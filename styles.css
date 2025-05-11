@@ -204,6 +204,8 @@ body {
   border-radius: 50px;
   background-color: #ebd9b9;
   align-items: center;
+  max-height: 95vh;
+  overflow-x: auto;
 }
 
 .pop-up-layout button {
